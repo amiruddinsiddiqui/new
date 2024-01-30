@@ -1,0 +1,460 @@
+.toggler{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+
+    nav a::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        bottom: 60%;
+        left: calc(110% + 25px); 
+      
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+
+ 
+
+
+    nav a:hover::after,
+    nav a:active::after {
+        opacity: 1;
+    
+    }
+    
+
+
+
+
+
+
+    
+.menu-wrap {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        z-index: 2;
+    }
+
+
+.menu {
+   
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    pointer-events: none; 
+   
+}
+
+
+.menu > div {
+    position: absolute;
+    top: 50%;
+   left: 50%;
+    transform: translateX(50%) translateY(-50%);
+    width: 1800px;
+    height: 1800px;
+    border-radius: 100%;
+    background-color: #393632;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .86s;
+ 
+}
+
+.menu > div {
+    width: 150%;
+    height: 150%;
+    flex-direction: column;
+    
+}
+
+
+
+.menu > div > div {
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 1;
+    transition: .6s;
+}
+
+
+
+    .menu > div > div > nav {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .toggler:checked ~ .menu > div {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    .toggler:checked ~ .menu > div > div {
+        opacity: 1;
+    }
+    
+
+    .toggler {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        right: .5rem;
+        width: 60px;
+        height: 60px;
+        z-index: 3;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .hamburger {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 60px;
+        height: 60px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #0040ff;
+        visibility: visible;
+    }
+    
+    .hamburger>div {
+        position: absolute;
+        width: 60%;
+        height: 3px;
+        border-radius: 1.5px;
+        background-color: #ffffff;
+        transition: .4s;
+    }
+    
+    .hamburger>div:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 1.5px;
+        background-color: #ffffff;
+        top: -10px;
+        left: 0;
+        transition: .4s;
+    }
+    
+    .hamburger>div:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 1.5px;
+        background-color: #ffffff;
+        top: 10px;
+        left: 0;
+        transition: .4s;
+    }
+    
+    .toggler:checked + .hamburger>div {
+        transform: rotate(135deg);
+   
+    }
+    
+
+    
+    .toggler:checked + .hamburger>div:before,
+    .toggler:checked + .hamburger>div:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    
+    .menu > div > div > nav a {
+        text-decoration: none;
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: 550;
+        text-transform: uppercase;
+        margin: .5rem;
+        transition: .3s;
+        
+    }
+
+
+
+    .menu > div > div > nav a:hover:active{
+        color: #0040ff;
+        
+    }
+
+
+
+    .toggler:checked ~ .menu {
+        visibility: visible;
+        opacity: 1; 
+        pointer-events: auto; 
+    }
+    
+
+    .hamburger,
+    .toggler {
+        width: 60px;
+        height: 60px;
+        visibility: visible;
+        top: 12px;
+        right: 13px;
+      
+    }
+
+
+ .logo{
+    display: none;
+    position: fixed;
+     cursor: pointer;   
+     left: 15px;
+     top: 3px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .pic{       /* edit karna hai issse */
+     display: flex;
+        max-height: 35vh;
+   
+    }
+
+
+
+
+
+
+}
+
+
+
+ /* responsive khatam */
+
+
+
+
+
+.pic{                     /* edit karna hai issse */
+    display: flex;
+    left: 10px;
+
+    position: absolute;
+    height: 50vh;
+
+   bottom: 20px;
+
+   
+}
+
+.container{
+    display: inline;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+@media only screen and (max-width: 768px){
+    .three h1{
+        display: none;
+    }
+
+    .pro1{
+        margin-top: 45px;
+        margin-left: 10px;
+    }
+
+    .pro1, .pro2, .pro3{
+    margin-bottom: 30px;
+ 
+    overflow: hidden;
+    padding: 5px;
+    baackground-color: green;
+
+    border-radius: 20px;
+
+    }
+
+    .pro1-pic1{
+        
+        1display: flex;
+        justify-content: center;
+
+        width: 170px;
+        justify-content: center;
+    }
+
+    .pro1 p, .pro2 p, .pro3 p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .pro3 p{
+        width: 170px;
+    }
+
+    .pro2{
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    .pro3{
+        margin-left: 10px
+    }
+
+    .pro2-pic2{
+        margin-lef;
+        adisplay: block;
+        width: 170px;
+        display: block;
+    }
+
+    .pro3-pic3{
+        display: block;
+        adisplay: block;
+        width: 170px;
+    }
+    .pro1-pic1{
+        display: block;
+    }
+
+}
+
+*/
+/*
+
+@media only screen and (max-width: 768px) {
+    .three h1{
+        display: none;
+
+    }
+ 
+
+    .pro1, .pro2, .pro3 {
+      
+        margin: 25px;
+        margin-left: 90px;
+        vertical-align: top;
+        adisplay: inline-block;
+        
+        margin-top: 32px;
+    }
+
+    .pro1-pic1, .pro2-pic2, .pro3-pic3{
+        
+        adisplay: inline-block;
+    
+        width: 160px;
+    }
+
+    .pro1 p, .pro2 p, .pro3 p{
+        width: 160px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    
+
+}
+*/
+
+
+
+
+
+
+/*        */
+/* Responsive styles using media queries */
+@media only screen and (max-width: 768px) {
+    .three h1{
+        font-size: 65px;
+        margin-top: 105px;
+    }
+    .pro1, .pro2, .pro3 {
+       
+        width: 55%;
+        qmargin: 20px; /* Center the elements and add space between them */
+        margin-left: 23.5%; /* Reset left margin */
+        margin-top: 7vh; /* Adjust top margin for spacing */
+        qtext-align: right; /* Center text */
+    }
+
+    .pro1 img, .pro2 img, .pro3 img {
+        width: 97.5%; /* Make images responsive within their containers */
+        display: block; /* Center the image within its container */
+        margin: 0;
+    }
+
+    .pro1 p, .pro2 p, .pro3 p {
+        awidth: 99%;
+        font-size: 15px;
+      
+        margin-top: 10px;
+        adisplay: inline-block;
+      
+        abackground-color: rgb(92, 71, 45);
+    }
+    .pro3 p{
+        text-align: left;
+        width: 55%;
+        
+    }
+    .pro1{
+        margin-top: 2vh;
+    }
+}
+
